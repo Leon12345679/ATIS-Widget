@@ -10,7 +10,7 @@ import Foundation
 
 class ConfigReader {
     enum ConfigKey: String {
-        case METARAPIKey
+        case AviationServiceAPIKey
     }
     
     static func readProperty<PropertyType>(key: ConfigKey, type: PropertyType.Type) -> PropertyType? {

@@ -65,7 +65,7 @@ extension AviationNetworkService {
                 endpointPath = "metar/\(icao)/decoded"
                 
             case .nearestICAO(let latitude, let longitude):
-                endpointPath = "/lat/\(latitude)/lon/\(longitude)?filter=A"
+                endpointPath = "/lat/\(latitude)/lon/\(longitude)/radius/100?filter=A"
             }
             
             return AviationNetworkService.baseURL + endpointPath

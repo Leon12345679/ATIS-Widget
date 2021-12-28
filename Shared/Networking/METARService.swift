@@ -12,9 +12,9 @@ import Combine
 class METARService {
     private let networkingLayer = NetworkingLayer()
 
-    func fetchMETAR(icao: String) -> AnyPublisher<METARWeather, NetworkError> {
+    func fetchMETAR(for icao: String) -> AnyPublisher<METARWeather, NetworkError> {
         let metarRequest = NetworkRequest(
-            endpoint: Endpoint.metar.endpoint,
+            endpoint: Endpoint.metar(icao: icao).endpoint,
             httpMethod: .GET
         )
         
@@ -23,18 +23,16 @@ class METARService {
 }
 
 extension METARService {
+    static let baseURL: String = "https://api.checkwx.com/"
     
-    enum Endpoint: String {
-        case metar = ""
+    enum Endpoint {
+        case metar(icao: String)
         
         var endpoint: String {
-            #if DEVELOP
-            let baseURL = ""
-            #elseif PROD
-            let baseURL = ""
-            #endif
-            
-            return baseURL + self.rawValue
+            switch self {
+            case .metar(let icao):
+                return METARService.baseURL + "metar/\(icao)"
+            }
         }
     }
     

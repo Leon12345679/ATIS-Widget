@@ -17,6 +17,12 @@ struct METARWeather: Codable {
         let rawText: String
         
         let station: StationInfo
+        
+        enum CodingKeys: String, CodingKey {
+            case icao
+            case rawText = "raw_text"
+            case station
+        }
     }
     
     struct StationInfo: Codable {

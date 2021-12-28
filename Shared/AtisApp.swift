@@ -11,7 +11,7 @@ import SwiftUI
 struct AtisApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AirportPickerView()
         }
     }
 }

@@ -9,19 +9,26 @@ import Foundation
 import Combine
 
 
-class METARService {
+class METARNetworkService {
     private let networkingLayer = NetworkingLayer()
-
-    func fetchMETAR(for icao: String) -> AnyPublisher<METARWeather, NetworkError> {
-        guard let apiKey = ConfigReader.readProperty(key: .METARAPIKey, type: String.self) else {
-            return AnyPublisher(
-                Fail(error: NetworkError.invalidRequest)
-            )
+    private let serviceHeaders: [String: String]
+    
+    init() {
+        let apiKey = ConfigReader.readProperty(key: .METARAPIKey, type: String.self)
+        
+        guard let metarAPIKey = apiKey else {
+            fatalError("Failed to read API Key from Config.plist")
         }
-                
+        
+        serviceHeaders = [
+            "X-API-Key": metarAPIKey
+        ]
+    }
+    
+    func fetchMETAR(for icao: String) -> AnyPublisher<METARWeather, NetworkError> {
         let metarRequest = NetworkRequest(
             endpoint: Endpoint.metar(icao: icao).endpoint,
-            headers: ["X-API-Key": apiKey],
+            headers: serviceHeaders,
             httpMethod: .GET
         )
         
@@ -29,7 +36,7 @@ class METARService {
     }
 }
 
-extension METARService {
+extension METARNetworkService {
     static let baseURL: String = "https://api.checkwx.com/"
     
     enum Endpoint {
@@ -38,7 +45,7 @@ extension METARService {
         var endpoint: String {
             switch self {
             case .metar(let icao):
-                return METARService.baseURL + "metar/\(icao)/decoded"
+                return METARNetworkService.baseURL + "metar/\(icao)/decoded"
             }
         }
     }

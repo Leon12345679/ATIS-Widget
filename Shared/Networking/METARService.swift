@@ -27,7 +27,7 @@ class METARNetworkService {
     
     func fetchMETAR(for icao: String) -> AnyPublisher<METARWeather, NetworkError> {
         let metarRequest = NetworkRequest(
-            endpoint: Endpoint.metar(icao: icao).endpoint,
+            endpoint: EndpointType.metar(icao: icao).endpoint,
             headers: serviceHeaders,
             httpMethod: .GET
         )
@@ -39,7 +39,7 @@ class METARNetworkService {
 extension METARNetworkService {
     static let baseURL: String = "https://api.checkwx.com/"
     
-    enum Endpoint {
+    enum EndpointType {
         case metar(icao: String)
         
         var endpoint: String {

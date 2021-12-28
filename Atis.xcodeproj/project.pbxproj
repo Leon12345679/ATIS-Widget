@@ -15,6 +15,8 @@
 		81320339277B1A810064B8BE /* NetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCAB227784B3A00468623 /* NetworkingLayer.swift */; };
 		8132033A277B1A850064B8BE /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCABD277AF84A00468623 /* NetworkRequest.swift */; };
 		8132033B277B1A8B0064B8BE /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCABA277AF81900468623 /* Encodable+.swift */; };
+		8132033D277B1B910064B8BE /* AirportPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132033C277B1B910064B8BE /* AirportPickerView.swift */; };
+		8132033E277B1B910064B8BE /* AirportPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8132033C277B1B910064B8BE /* AirportPickerView.swift */; };
 		813DCA8227783ECD00468623 /* AtisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCA7227783ECC00468623 /* AtisApp.swift */; };
 		813DCA8327783ECD00468623 /* AtisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCA7227783ECC00468623 /* AtisApp.swift */; };
 		813DCA8427783ECD00468623 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCA7327783ECC00468623 /* ContentView.swift */; };
@@ -68,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		81320332277B0DE10064B8BE /* METARService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METARService.swift; sourceTree = "<group>"; };
+		8132033C277B1B910064B8BE /* AirportPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportPickerView.swift; sourceTree = "<group>"; };
 		813DCA7227783ECC00468623 /* AtisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtisApp.swift; sourceTree = "<group>"; };
 		813DCA7327783ECC00468623 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		813DCA7427783ECD00468623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 		81320330277B0D8B0064B8BE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8132033C277B1B910064B8BE /* AirportPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,6 +369,7 @@
 				813DCA8227783ECD00468623 /* AtisApp.swift in Sources */,
 				813DCABE277AF84A00468623 /* NetworkRequest.swift in Sources */,
 				813DCAB327784B3A00468623 /* NetworkingLayer.swift in Sources */,
+				8132033D277B1B910064B8BE /* AirportPickerView.swift in Sources */,
 				813DCAAF277847E900468623 /* METARWeather.swift in Sources */,
 				813DCAB727784BA600468623 /* ConfigReader.swift in Sources */,
 				813DCAA227783F1600468623 /* AtisWidget.intentdefinition in Sources */,
@@ -380,6 +385,7 @@
 				813DCABF277AF86900468623 /* NetworkRequest.swift in Sources */,
 				813DCA8527783ECD00468623 /* ContentView.swift in Sources */,
 				813DCAB427784B3A00468623 /* NetworkingLayer.swift in Sources */,
+				8132033E277B1B910064B8BE /* AirportPickerView.swift in Sources */,
 				813DCAB0277847E900468623 /* METARWeather.swift in Sources */,
 				813DCABC277AF83D00468623 /* Encodable+.swift in Sources */,
 				813DCAB827784BA600468623 /* ConfigReader.swift in Sources */,

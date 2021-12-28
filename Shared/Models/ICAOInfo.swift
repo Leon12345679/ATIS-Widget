@@ -1,5 +1,5 @@
 //
-//  AirportInfo.swift
+//  ICAOInfo.swift
 //  Atis
 //
 //  Created by Leon Vladimirov on 12/28/21.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct AirportInfo: Codable {
+struct ICAOInfo: Codable {
     let results: Int
     let data: [RawData]
     

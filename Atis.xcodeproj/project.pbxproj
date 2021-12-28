@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		81320333277B0DE10064B8BE /* METARService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81320332277B0DE10064B8BE /* METARService.swift */; };
 		81320334277B0DE10064B8BE /* METARService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81320332277B0DE10064B8BE /* METARService.swift */; };
+		81320336277B1A6D0064B8BE /* METARWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCAAE277847E900468623 /* METARWeather.swift */; };
+		81320337277B1A730064B8BE /* METARService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81320332277B0DE10064B8BE /* METARService.swift */; };
+		81320338277B1A7A0064B8BE /* ConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCAB627784BA600468623 /* ConfigReader.swift */; };
+		81320339277B1A810064B8BE /* NetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCAB227784B3A00468623 /* NetworkingLayer.swift */; };
+		8132033A277B1A850064B8BE /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCABD277AF84A00468623 /* NetworkRequest.swift */; };
+		8132033B277B1A8B0064B8BE /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCABA277AF81900468623 /* Encodable+.swift */; };
 		813DCA8227783ECD00468623 /* AtisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCA7227783ECC00468623 /* AtisApp.swift */; };
 		813DCA8327783ECD00468623 /* AtisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCA7227783ECC00468623 /* AtisApp.swift */; };
 		813DCA8427783ECD00468623 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCA7327783ECC00468623 /* ContentView.swift */; };
@@ -386,8 +392,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8132033A277B1A850064B8BE /* NetworkRequest.swift in Sources */,
 				813DCA9C27783F1500468623 /* AtisWidget.swift in Sources */,
+				81320339277B1A810064B8BE /* NetworkingLayer.swift in Sources */,
+				8132033B277B1A8B0064B8BE /* Encodable+.swift in Sources */,
+				81320336277B1A6D0064B8BE /* METARWeather.swift in Sources */,
 				813DCAA127783F1600468623 /* AtisWidget.intentdefinition in Sources */,
+				81320338277B1A7A0064B8BE /* ConfigReader.swift in Sources */,
+				81320337277B1A730064B8BE /* METARService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

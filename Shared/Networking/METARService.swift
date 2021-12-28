@@ -17,7 +17,7 @@ class METARNetworkService {
         let apiKey = ConfigReader.readProperty(key: .METARAPIKey, type: String.self)
         
         guard let metarAPIKey = apiKey else {
-            fatalError("Failed to read API Key from Config.plist")
+            fatalError("Failed to read METAR API Key from Config.plist")
         }
         
         serviceHeaders = [

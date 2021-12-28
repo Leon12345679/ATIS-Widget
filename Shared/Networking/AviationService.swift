@@ -19,7 +19,7 @@ class AviationNetworkService {
         let apiKey = ConfigReader.readProperty(key: .AviationServiceAPIKey, type: String.self)
         
         guard let aviationAPIKey = apiKey else {
-            fatalError("Failed to read METAR API Key from Config.plist")
+            fatalError("Failed to read Service API Key from Config.plist")
         }
         
         serviceHeaders = [

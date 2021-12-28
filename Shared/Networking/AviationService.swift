@@ -48,6 +48,9 @@ class AviationNetworkService {
     }
 }
 
+
+// MARK: - Endpoint Type
+
 extension AviationNetworkService {
     
     enum EndpointType {

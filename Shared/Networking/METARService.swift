@@ -31,7 +31,7 @@ extension METARService {
         var endpoint: String {
             switch self {
             case .metar(let icao):
-                return METARService.baseURL + "metar/\(icao)"
+                return METARService.baseURL + "metar/\(icao)/decoded"
             }
         }
     }

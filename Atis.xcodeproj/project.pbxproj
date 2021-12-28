@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81320333277B0DE10064B8BE /* METARService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81320332277B0DE10064B8BE /* METARService.swift */; };
+		81320334277B0DE10064B8BE /* METARService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81320332277B0DE10064B8BE /* METARService.swift */; };
 		813DCA8227783ECD00468623 /* AtisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCA7227783ECC00468623 /* AtisApp.swift */; };
 		813DCA8327783ECD00468623 /* AtisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCA7227783ECC00468623 /* AtisApp.swift */; };
 		813DCA8427783ECD00468623 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCA7327783ECC00468623 /* ContentView.swift */; };
@@ -32,7 +34,6 @@
 		813DCABC277AF83D00468623 /* Encodable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCABA277AF81900468623 /* Encodable+.swift */; };
 		813DCABE277AF84A00468623 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCABD277AF84A00468623 /* NetworkRequest.swift */; };
 		813DCABF277AF86900468623 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCABD277AF84A00468623 /* NetworkRequest.swift */; };
-		813DCACD277B006F00468623 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DCACC277B006F00468623 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		81320332277B0DE10064B8BE /* METARService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = METARService.swift; sourceTree = "<group>"; };
 		813DCA7227783ECC00468623 /* AtisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtisApp.swift; sourceTree = "<group>"; };
 		813DCA7327783ECC00468623 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		813DCA7427783ECD00468623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,7 +81,6 @@
 		813DCAB627784BA600468623 /* ConfigReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigReader.swift; sourceTree = "<group>"; };
 		813DCABA277AF81900468623 /* Encodable+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+.swift"; sourceTree = "<group>"; };
 		813DCABD277AF84A00468623 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		813DCACC277B006F00468623 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +110,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81320330277B0D8B0064B8BE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		81320335277B0DEE0064B8BE /* Networking Layer */ = {
+			isa = PBXGroup;
+			children = (
+				813DCAB227784B3A00468623 /* NetworkingLayer.swift */,
+				813DCABD277AF84A00468623 /* NetworkRequest.swift */,
+			);
+			path = "Networking Layer";
+			sourceTree = "<group>";
+		};
 		813DCA6C27783ECC00468623 = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +144,7 @@
 				813DCAB527784B9900468623 /* Helpers */,
 				813DCAB127784B1E00468623 /* Networking */,
 				813DCAAD277847C600468623 /* Models */,
-				813DCACB277B006800468623 /* Util */,
+				81320330277B0D8B0064B8BE /* Views */,
 				813DCAAA2778468400468623 /* Config.plist */,
 				813DCA7227783ECC00468623 /* AtisApp.swift */,
 				813DCA7327783ECC00468623 /* ContentView.swift */,
@@ -185,8 +202,8 @@
 		813DCAB127784B1E00468623 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				813DCAB227784B3A00468623 /* NetworkingLayer.swift */,
-				813DCABD277AF84A00468623 /* NetworkRequest.swift */,
+				81320332277B0DE10064B8BE /* METARService.swift */,
+				81320335277B0DEE0064B8BE /* Networking Layer */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -205,14 +222,6 @@
 				813DCABA277AF81900468623 /* Encodable+.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		813DCACB277B006800468623 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				813DCACC277B006F00468623 /* Constants.swift */,
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +356,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				813DCA8427783ECD00468623 /* ContentView.swift in Sources */,
-				813DCACD277B006F00468623 /* Constants.swift in Sources */,
 				813DCA8227783ECD00468623 /* AtisApp.swift in Sources */,
 				813DCABE277AF84A00468623 /* NetworkRequest.swift in Sources */,
 				813DCAB327784B3A00468623 /* NetworkingLayer.swift in Sources */,
@@ -355,6 +363,7 @@
 				813DCAB727784BA600468623 /* ConfigReader.swift in Sources */,
 				813DCAA227783F1600468623 /* AtisWidget.intentdefinition in Sources */,
 				813DCABB277AF81900468623 /* Encodable+.swift in Sources */,
+				81320333277B0DE10064B8BE /* METARService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +378,7 @@
 				813DCABC277AF83D00468623 /* Encodable+.swift in Sources */,
 				813DCAB827784BA600468623 /* ConfigReader.swift in Sources */,
 				813DCA8327783ECD00468623 /* AtisApp.swift in Sources */,
+				81320334277B0DE10064B8BE /* METARService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

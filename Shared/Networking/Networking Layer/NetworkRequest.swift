@@ -50,8 +50,8 @@ struct NetworkRequest {
         self.httpMethod = httpMethod
     }
     
-    func buildURLRequest(with baseURL: String) -> URLRequest? {
-        guard let url = URL(string: baseURL + endpoint) else {
+    func buildURLRequest() -> URLRequest? {
+        guard let url = URL(string: endpoint) else {
             return nil
         }
         

@@ -37,7 +37,7 @@ class AviationNetworkService {
         return networkingLayer.runRequest(metarRequest)
     }
     
-    func fetchNearestAirport(lat: Double, long: Double) -> AnyPublisher<METARWeather, NetworkError> {
+    func fetchNearestAirport(lat: Double, long: Double) -> AnyPublisher<AirportInfo, NetworkError> {
         let metarRequest = NetworkRequest(
             endpoint: EndpointType.nearestICAO(lat: lat, long: long).endpoint,
             headers: serviceHeaders,

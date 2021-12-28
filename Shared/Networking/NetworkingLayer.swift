@@ -13,7 +13,7 @@ import SwiftUI
 class NetworkingLayer {
     
     func runRequest<ResponseType: Codable>( _ request: NetworkRequest) -> AnyPublisher<ResponseType, NetworkError> {
-        guard let urlRequest = request.buildURLRequest(for: .production) else {
+        guard let urlRequest = request.buildURLRequest(with: Constants.baseURL) else {
             return AnyPublisher(
                 Fail(error: NetworkError.invalidRequest)
             )

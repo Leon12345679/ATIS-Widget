@@ -10,6 +10,8 @@ import Combine
 
 
 class AviationNetworkService {
+    private static let baseURL: String = "https://api.checkwx.com/"
+    
     private let networkingLayer = NetworkingLayer()
     private let serviceHeaders: [String: String]
     
@@ -47,7 +49,6 @@ class AviationNetworkService {
 }
 
 extension AviationNetworkService {
-    static let baseURL: String = "https://api.checkwx.com/"
     
     enum EndpointType {
         case metar(icao: String)

@@ -13,8 +13,15 @@ class METARService {
     private let networkingLayer = NetworkingLayer()
 
     func fetchMETAR(for icao: String) -> AnyPublisher<METARWeather, NetworkError> {
+        guard let apiKey = ConfigReader.readProperty(key: .METARAPIKey, type: String.self) else {
+            return AnyPublisher(
+                Fail(error: NetworkError.invalidRequest)
+            )
+        }
+                
         let metarRequest = NetworkRequest(
             endpoint: Endpoint.metar(icao: icao).endpoint,
+            headers: ["X-API-Key": apiKey],
             httpMethod: .GET
         )
         
